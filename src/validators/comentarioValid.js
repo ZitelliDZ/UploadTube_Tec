@@ -1,4 +1,4 @@
-import { check, body, param } from "express-validator";
+import { body, param } from "express-validator";
 
 import validateResult from "../helpers/validateHelper.js";
 

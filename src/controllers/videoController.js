@@ -164,7 +164,7 @@ const editarVideo = async (req, res, next) => {
   existeVideo.privado = req.body.privado == "false" ? false : true;
 
   try {
-    const videoAlmacenado = await existeVideo.save();
+    await existeVideo.save();
     res.json(existeVideo);
   } catch (error) {
     return next({

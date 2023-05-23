@@ -106,7 +106,7 @@ const validateNuevoPassword = [
 //se deben modificar todas las validaciones.. es mucho mas seguro realizarlo en Auth
 const validatePerfil = [
   check("authorization")
-    .custom(async (value, { req }) => {
+    .custom(async (value, { _req }) => {
       const token = value.split(" ")[1];
       verificarJWT(token);
     })

@@ -1,4 +1,5 @@
 import mongoose from "mongoose";
+import { loggerPersonalizadoDefault } from "./logsConfig.js";
 
 //Funcion que crea la conexion a la base de datos de mongoDB
 const conectarDB = async () => {

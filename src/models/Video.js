@@ -1,5 +1,4 @@
 import mongoose from "mongoose";
-import Comentario from "./Comentario.js";
 
 const videosSchema = mongoose.Schema(
   {

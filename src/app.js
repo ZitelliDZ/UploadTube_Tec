@@ -22,7 +22,7 @@ const app = express();
 app.use(express.json()); //puede procesar la informacion tipo json
 
 dotenv.config(); //carga las variables de entorno
-await conectarDB(); //conecta la base de datos a partir de la funcion creada en la carpeta config
+conectarDB(); //conecta la base de datos a partir de la funcion creada en la carpeta config
 
 const PORT = process.env.APP_PORT || 4000;
 

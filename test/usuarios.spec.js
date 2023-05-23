@@ -211,13 +211,12 @@ describe("Cambiar de password - POST /reset-password/:token", () => {
 });
 
 describe("Consultar Perfil - GET /perfil", () => {
-  let bearerToken;
+ 
   test("deberia responder con un codigo de estado 200 - Login", async () => {
     const response = await request(app).post("/api/usuarios/login").send({
       email: email,
       password: password,
     });
     expect(response.statusCode).toBe(200);
-    bearerToken = response.body.token;
   });
 });
