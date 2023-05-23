@@ -1,0 +1,201 @@
+{
+	"info": {
+		"_postman_id": "6825c403-286a-4cd4-884f-10e87e61f0d6",
+		"name": "Comentarios",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "10337977"
+	},
+	"item": [
+		{
+			"name": "Agregar un comentario al video",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{TOKEN}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"comentario\" : \"Excelente - video\",\r\n    \"video\" : \"646a4a4bd5163e5d0b5440e4\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{API_URL}}/comentarios",
+					"host": [
+						"{{API_URL}}"
+					],
+					"path": [
+						"comentarios"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Obtener Comentario",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{TOKEN}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{API_URL}}/comentarios/646b7c6b789be74f7852237e",
+					"host": [
+						"{{API_URL}}"
+					],
+					"path": [
+						"comentarios",
+						"646b7c6b789be74f7852237e"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Dar Like al comentario",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{TOKEN}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"asd\" : \"sad\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{API_URL}}/comentarios/like/646b7c6b789be74f7852237e",
+					"host": [
+						"{{API_URL}}"
+					],
+					"path": [
+						"comentarios",
+						"like",
+						"646b7c6b789be74f7852237e"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Editar Comentario",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{TOKEN}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"comentario\" : \"Comentario Actualizado\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{API_URL}}/comentarios/646a7055105ba54e40e79b66",
+					"host": [
+						"{{API_URL}}"
+					],
+					"path": [
+						"comentarios",
+						"646a7055105ba54e40e79b66"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Eliminar Comentario",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{TOKEN}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{API_URL}}/comentarios/646a7055105ba54e40e79b66",
+					"host": [
+						"{{API_URL}}"
+					],
+					"path": [
+						"comentarios",
+						"646a7055105ba54e40e79b66"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

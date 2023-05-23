@@ -1,0 +1,211 @@
+{
+	"info": {
+		"_postman_id": "1b3554b3-a583-414f-88c0-524ccebf0890",
+		"name": "Usuarios",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "10337977"
+	},
+	"item": [
+		{
+			"name": "Registro de usuario",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nombre\" : \"Diego Zitelli\",\r\n    \"password\" : \"123456789\",\r\n    \"email\" : \"zite@hotmail.es\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{API_URL}}/usuarios",
+					"host": [
+						"{{API_URL}}"
+					],
+					"path": [
+						"usuarios"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Autenticación de usuario y creacion de token de session",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0NmM3Y2VhYTQ5ZDgyNTFjZTg1ZmRjMCIsImlhdCI6MTY4NDgzMTUyMSwiZXhwIjoxNjg0OTE3OTIxfQ.3VBtS0O4fI1pvYcJPiVX1kCVejGLZi4nUA-vFGhhUdk",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"zite@hotmail.es\",\r\n    \"password\": \"123456789\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{API_URL}}/usuarios/login",
+					"host": [
+						"{{API_URL}}"
+					],
+					"path": [
+						"usuarios",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Confirmar registro de usuario",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{API_URL}}/usuarios/confirmar/66jf001d8e1h13sfsog",
+					"host": [
+						"{{API_URL}}"
+					],
+					"path": [
+						"usuarios",
+						"confirmar",
+						"66jf001d8e1h13sfsog"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Envío de email para recuperación de password",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\" : \"zite@hotmail.es\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{API_URL}}/usuarios/reset-password",
+					"host": [
+						"{{API_URL}}"
+					],
+					"path": [
+						"usuarios",
+						"reset-password"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Verificar token",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{API_URL}}/usuarios/reset-password/asd3232r",
+					"host": [
+						"{{API_URL}}"
+					],
+					"path": [
+						"usuarios",
+						"reset-password",
+						"asd3232r"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Cambiar Password",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{TOKEN}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"password\":\"123456789\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{API_URL}}/usuarios/reset-password/tq9sald6771h12h0it3",
+					"host": [
+						"{{API_URL}}"
+					],
+					"path": [
+						"usuarios",
+						"reset-password",
+						"tq9sald6771h12h0it3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Buscar perfil del usuario",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{TOKEN}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{API_URL}}/usuarios/perfil",
+					"host": [
+						"{{API_URL}}"
+					],
+					"path": [
+						"usuarios",
+						"perfil"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

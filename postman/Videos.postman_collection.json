@@ -1,0 +1,225 @@
+{
+	"info": {
+		"_postman_id": "2abb4542-8bb0-48ea-9a1e-4f1251a5ac51",
+		"name": "Videos",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "10337977"
+	},
+	"item": [
+		{
+			"name": "Devuelve todos los videos publicos",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{API_URL}}/videos",
+					"host": [
+						"{{API_URL}}"
+					],
+					"path": [
+						"videos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Guardar nuevo Video",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{TOKEN}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"type": "file",
+							"src": "/D:/video2.mkv"
+						},
+						{
+							"key": "titulo",
+							"value": "El reality show de las situaciones más embarazosas: ¡prepárate para reír!.",
+							"type": "text"
+						},
+						{
+							"key": "descripcion",
+							"value": "En este hilarante reality show, te invitamos a sumergirte en un mundo lleno de momentos vergonzosos y divertidos. Los concursantes se enfrentarán a desafíos extravagantes y situaciones embarazosas mientras intentan mantener la compostura y evitar estallar en risas incontrolables.",
+							"type": "text"
+						},
+						{
+							"key": "creditos",
+							"value": "ChatGPT",
+							"type": "text"
+						},
+						{
+							"key": "privado",
+							"value": "false",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{API_URL}}/videos",
+					"host": [
+						"{{API_URL}}"
+					],
+					"path": [
+						"videos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Obtener Video",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{API_URL}}/videos/646cab81fa0db6c5a9da649a",
+					"host": [
+						"{{API_URL}}"
+					],
+					"path": [
+						"videos",
+						"646cab81fa0db6c5a9da649a"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Editar Video",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{TOKEN}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"titulo\" : \"Titulo Editado\",\r\n    \"descripcion\" : \"Comentario Editado\",\r\n    \"creditos\" : \"Creditos Editado\",\r\n    \"privado\" : \"false\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{API_URL}}/videos/646cab81fa0db6c5a9da649a",
+					"host": [
+						"{{API_URL}}"
+					],
+					"path": [
+						"videos",
+						"646cab81fa0db6c5a9da649a"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Eliminar Video",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{TOKEN}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{API_URL}}/videos/646c6691c5b7eea0516c2f28",
+					"host": [
+						"{{API_URL}}"
+					],
+					"path": [
+						"videos",
+						"646c6691c5b7eea0516c2f28"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Obtener Tops Videos",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{TOKEN}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{API_URL}}/videos/top/2",
+					"host": [
+						"{{API_URL}}"
+					],
+					"path": [
+						"videos",
+						"top",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "(No Documentada)",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{TOKEN}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{API_URL}}/public/videos/5trscpvubfo1h13k7ik2-Video.mkv",
+					"host": [
+						"{{API_URL}}"
+					],
+					"path": [
+						"public",
+						"videos",
+						"5trscpvubfo1h13k7ik2-Video.mkv"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

@@ -1,0 +1,5 @@
+/src/uploads/videos/**
+!.gitkeep
+node_modules
+/**/*.log
+.env
