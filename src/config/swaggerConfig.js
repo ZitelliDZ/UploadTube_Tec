@@ -12,9 +12,9 @@ const optionsSwagger = {
   definition: {
     openapi: "3.0.1",
     info: {
-      title: "Prueba Tecnica",
+      title: "Sistema Gestor de Asistencia UGD",
       version: "1.0.0",
-      description: "Api de la Prueba Tecnica para Bemaster.com",
+      description: "Api del Sistema de Gestion de Asistencia UGD",
     },
 
     components: {

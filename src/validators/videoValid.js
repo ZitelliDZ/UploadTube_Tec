@@ -2,8 +2,10 @@ import { fileURLToPath } from "url";
 import { dirname, join } from "path";
 import { body, param } from "express-validator";
 
-import validateVideoResult from "../helpers/validateVideoHelper.js";
-import validateResult from "../helpers/validateHelper.js";
+import {
+  validateResult,
+  validateVideoResult,
+} from "../helpers/validateHelper.js";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);

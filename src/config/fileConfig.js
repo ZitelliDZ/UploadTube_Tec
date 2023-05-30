@@ -17,7 +17,7 @@ const storage = multer.diskStorage({
   },
 });
 
-//configuracion upload Multer
+//Configuracion upload Multer
 const upload = multer({
   storage: storage,
   fileFilter: (req, file, cb) => {
